@@ -107,7 +107,7 @@ class Ticket(models.Model):
 
     def save(self, *args, **kwargs) -> None:
         self.full_clean()
-        return super().save(*args, **kwargs)
+        super().save(*args, **kwargs)
 
     def __str__(self) -> None:
         return (f"{self.movie_session.movie.title} "
